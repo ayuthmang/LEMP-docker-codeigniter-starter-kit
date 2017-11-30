@@ -1,0 +1,9 @@
+version: '2'
+services:
+  nginx:
+    image: nginx:1.13.7
+    container_name: lemp-nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/conf/:/etc/nginx/
