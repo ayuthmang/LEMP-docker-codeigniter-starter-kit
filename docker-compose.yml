@@ -8,3 +8,4 @@ services:
     volumes:
       - ./nginx/conf/:/etc/nginx/:ro
       - ./nginx/site/:/usr/share/nginx/html/
+      - ./nginx/log/:/var/log/nginx/
