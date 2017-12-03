@@ -6,5 +6,5 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./nginx/conf/:/etc/nginx/ # tbc readonly
+      - ./nginx/conf/:/etc/nginx/:ro
       - ./nginx/site/:/usr/share/nginx/html/
