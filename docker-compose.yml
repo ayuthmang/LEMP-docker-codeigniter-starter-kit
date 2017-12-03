@@ -1,4 +1,4 @@
-version: '2'
+version: '2.3'
 services:
   nginx:
     image: nginx:1.13.7
@@ -9,3 +9,26 @@ services:
       - ./nginx/conf/:/etc/nginx/:ro
       - ./nginx/site/:/usr/share/nginx/html/
       - ./nginx/log/:/var/log/nginx/
+    depends_on:
+      - php
+    networks:
+      - lemp-network
+
+  php:
+    image: blacksource/php7-fpm
+    container_name: lemp-php7fpm
+    expose: 
+      - "9000"
+    networks:
+      - lemp-network
+    volumes:
+      - ./php/conf/:/etc/php/7.0/fpm/
+
+networks:
+  lemp-network:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.20.1.0/24
+          gateway: 172.20.1.1
