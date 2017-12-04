@@ -10,19 +10,22 @@ services:
       - ./nginx/site/:/usr/share/nginx/html/
       - ./nginx/log/:/var/log/nginx/
     depends_on:
-      - php
+      - phpfpm
     networks:
       - lemp-network
 
-  php:
+  phpfpm:
     image: blacksource/php7-fpm
-    container_name: lemp-php7fpm
+    container_name: lemp-phpfpm
     expose: 
       - "9000"
     networks:
       - lemp-network
     volumes:
-      - ./php/conf/:/etc/php/7.0/fpm/
+      - ./phpfpm/conf/fpm/php.ini:/etc/php/7.0/fpm/php.ini
+      - ./phpfpm/conf/fpm/php-fpm.conf:/etc/php/7.0/fpm/php-fpm.conf
+      - ./phpfpm/conf/cli/php.ini:/etc/php/7.0/cli/php.ini
+      - ./nginx/site/:/usr/share/nginx/html
 
 networks:
   lemp-network:
