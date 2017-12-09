@@ -12,20 +12,37 @@ services:
     depends_on:
       - phpfpm
     networks:
-      - lemp-network
+      lemp-network:
+        ipv4_address: ${LEMP_NGINX}
 
   phpfpm:
     image: blacksource/php7-fpm
     container_name: lemp-phpfpm
     expose: 
       - "9000"
-    networks:
-      - lemp-network
     volumes:
       - ./phpfpm/conf/fpm/php.ini:/etc/php/7.0/fpm/php.ini
       - ./phpfpm/conf/fpm/php-fpm.conf:/etc/php/7.0/fpm/php-fpm.conf
       - ./phpfpm/conf/cli/php.ini:/etc/php/7.0/cli/php.ini
       - ./nginx/site/:/usr/share/nginx/html
+    networks:
+      lemp-network:
+        ipv4_address: ${LEMP_PHPFPM}
+
+  mysql:
+    image: mysql:5.7.20
+    container_name: lemp-mysql
+    ports:
+      - "3306:3306"
+    volumes: 
+      - ./mysql/conf/:/etc/mysql/conf.d
+      - ./mysql/storage/:/var/lib/mysql
+      - ./mysql/log/:/var/log/mysql
+    environment: 
+      MYSQL_ROOT_PASSWORD: asdf 
+    networks:
+      lemp-network:
+        ipv4_address: ${LEMP_MYSQL}
 
 networks:
   lemp-network:
@@ -33,5 +50,5 @@ networks:
     ipam:
       driver: default
       config:
-        - subnet: 172.20.1.0/24
-          gateway: 172.20.1.1
+        - subnet: ${LEMP_SUBNET}
+          gateway: ${LEMP_GATEWAY}
