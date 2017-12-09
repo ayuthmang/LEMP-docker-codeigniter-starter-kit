@@ -8,14 +8,26 @@ macOS & Others unix just download and install on docker official site.
 
 # Usage
 
-
-## Start Containers
+## Create and Start Containers
 
 ```
 $ docker-compose up -d
 ```
+
+If you already ```docker-compose up -d``` you can just
+
+```
+$ docker-compose start
+```
+
 ## Stop Containers
 
 ```
 $ docker-compose stop
+```
+
+## Stop and remove containers, networks, images, and volumes
+
+```
+$ docker-compose down
 ```
