@@ -1,1 +1,5 @@
 nginx/log/
+
+
+mysql/log
+mysql/storage
