@@ -1,5 +1,7 @@
 # LEMP docker starter integrated with Codeigniter
 
+Quick learning, deubgging, playing with Codeigniter just one line of command.
+
 # Prerequisite
 
 Windows requires 64bit Windows 10 Pro with Hyper-V available. Please see What to know before you install for a full list of prerequisites.
