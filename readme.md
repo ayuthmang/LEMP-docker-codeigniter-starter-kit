@@ -1,6 +1,6 @@
 # LEMP docker starter integrated with Codeigniter
 
-Quick learning, deubgging, playing with Codeigniter just one line of command.
+Quick learning, deubgging, playing with [Codeigniter](https://codeigniter.com/) just one line of command.
 
 # Prerequisite
 
