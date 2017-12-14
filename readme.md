@@ -39,3 +39,17 @@ $ docker-compose down
 # Structures
 
 Overall structures
+
+```
+├── docker-compose.yml
+├── mysql
+│   └── conf
+├── nginx
+│   ├── conf
+│   ├── log
+│   └── site
+└── phpfpm
+    └── conf
+        ├── cli
+        └── fpm
+```
