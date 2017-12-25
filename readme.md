@@ -56,7 +56,11 @@ $ docker-compose down
 ## Private IP Address 
 
 Private address which container talk to each others
+
+
 (If you want to access with host just add uncomment in docker-compose.yml)
+
+
 (If you want to edit private ip address just go to .env file)
 
 ```
