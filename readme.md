@@ -38,7 +38,7 @@ $ docker-compose down
 
 # Structures
 
-Overall structures
+## Overall structures
 
 ```
 ├── docker-compose.yml
@@ -52,4 +52,17 @@ Overall structures
     └── conf
         ├── cli
         └── fpm
+```
+## Private IP Address
+
+Private address which container talk to each others
+(If you want to access with host just add uncomment in docker-compose.yml)
+
+```
+Gateway: 172.20.1.1
+Subnet: 172.20.0.0/16
+
+Nginx: 172.20.1.2
+PhpFPM: 172.20.1.3
+MySQL: 172.20.1.4
 ```
