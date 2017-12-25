@@ -37,7 +37,10 @@ $ docker-compose down
 ## Access Codeigniter
 
 After you create and start containers
-Go to http://localhost/codeigniter
+
+Website: http://localhost/codeigniter
+
+phpmyadmin: http://localhost/phpmyadmin
 
 ---
 
