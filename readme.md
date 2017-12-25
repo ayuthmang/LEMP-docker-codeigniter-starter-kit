@@ -43,15 +43,15 @@ $ docker-compose down
 ```
 ├── docker-compose.yml
 ├── mysql
-│   └── conf
+│   └── conf -- mysql config
 ├── nginx
-│   ├── conf
-│   ├── log
-│   └── site
+│   ├── conf -- nginx config files
+│   ├── log -- nginx logs
+│   └── site -- storage public sites
 └── phpfpm
     └── conf
-        ├── cli
-        └── fpm
+        ├── cli -- php-cli config
+        └── fpm -- php-fpm config
 ```
 ## Private IP Address 
 
