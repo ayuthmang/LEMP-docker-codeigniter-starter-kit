@@ -34,6 +34,11 @@ $ docker-compose stop
 $ docker-compose down
 ```
 
+## Access Codeigniter
+
+After you create and start containers
+Go to http://localhost/codeigniter
+
 ---
 
 # Structures
