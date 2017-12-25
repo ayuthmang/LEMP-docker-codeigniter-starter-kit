@@ -48,6 +48,8 @@ phpmyadmin: http://localhost/phpmyadmin
 
 ## Overall structures
 
+This structure looks like https://github.com/nuuneoi/lemp-docker-starter-kit cuz me 
+
 ```
 ├── docker-compose.yml
 ├── mysql
@@ -79,3 +81,7 @@ Nginx: 172.20.1.2
 PhpFPM: 172.20.1.3
 MySQL: 172.20.1.4
 ```
+
+# Special Thanks
+
+Thanks this stureture and idea from nuuneoi https://github.com/nuuneoi/lemp-docker-starter-kit
