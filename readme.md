@@ -2,15 +2,15 @@
 
 Quick learning, deubgging, playing with [Codeigniter](https://codeigniter.com/) just one line of command.
 
-# Prerequisite
+## Prerequisite
 
 Windows requires 64bit Windows 10 Pro with Hyper-V available. Please see What to know before you install for a full list of prerequisites.
 
 macOS & Others unix just download and install on docker official site.
 
-# Usage
+## Usage
 
-## Create and Start Containers
+### Create and Start Containers
 
 ```
 $ docker-compose up -d
@@ -22,19 +22,19 @@ If you already ```docker-compose up -d``` you can just
 $ docker-compose start
 ```
 
-## Stop Containers
+### Stop Containers
 
 ```
 $ docker-compose stop
 ```
 
-## Stop and remove containers, networks, images, and volumes
+### Stop and remove containers, networks, images, and volumes
 
 ```
 $ docker-compose down
 ```
 
-## Access Codeigniter
+### Access Codeigniter
 
 After you create and start containers
 
@@ -44,9 +44,9 @@ phpmyadmin: http://localhost/phpmyadmin
 
 ---
 
-# Structures
+## Structures
 
-## Overall structures
+### Overall structures
 
 ```
 ├── docker-compose.yml
@@ -61,7 +61,7 @@ phpmyadmin: http://localhost/phpmyadmin
         ├── cli -- php-cli config
         └── fpm -- php-fpm config
 ```
-## Private IP Address 
+### Private IP Address 
 
 Private address which container talk to each others
 
@@ -80,6 +80,6 @@ PhpFPM: 172.20.1.3
 MySQL: 172.20.1.4
 ```
 
-# Special Thanks
+## Special Thanks
 
 I built this project from scratch for a practice with docker and thanks his stureture and idea from nuuneoi https://github.com/nuuneoi/lemp-docker-starter-kit
