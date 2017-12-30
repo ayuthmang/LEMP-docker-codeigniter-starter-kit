@@ -29,14 +29,21 @@ services:
       lemp-network:
         ipv4_address: ${LEMP_PHPFPM}
 
+  mysql-data:
+    image: busybox
+    container_name: lemp-mysql-data
+    volumes:
+      - ./mysql/storage:/var/lib/mysql
+
   mysql:
     image: mysql:5.7.20
     container_name: lemp-mysql
     ports:
       - "3306:3306"
+    volumes_from:
+      - mysql-data
     volumes: 
       - ./mysql/conf/:/etc/mysql/conf.d
-      - ./mysql/storage/:/var/lib/mysql
       - ./mysql/log/:/var/log/mysql
     environment: 
       MYSQL_ROOT_PASSWORD: asdf 
