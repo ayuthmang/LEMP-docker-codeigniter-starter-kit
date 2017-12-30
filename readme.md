@@ -82,4 +82,4 @@ MySQL: 172.20.1.4
 
 # Special Thanks
 
-Thanks this stureture and idea from nuuneoi https://github.com/nuuneoi/lemp-docker-starter-kit
+I built this project from scratch for a practice with docker and thanks his stureture and idea from nuuneoi https://github.com/nuuneoi/lemp-docker-starter-kit
