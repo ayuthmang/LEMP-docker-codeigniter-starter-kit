@@ -49,18 +49,18 @@ phpmyadmin: http://localhost/phpmyadmin
 ### Overall structures
 
 ```
-├── docker-compose.yml
 ├── mysql
-│   └── conf -- mysql config
+│   └── conf    --- MySQL config
 ├── nginx
-│   ├── conf -- nginx config files
-│   ├── log -- nginx logs
-│   └── site -- storage public sites
+│   ├── conf    --- Nginx configuration folder
+│   ├── log     --- Nginx logs folder
+│   └── site    --- Store our sites, php scripts
 └── phpfpm
     └── conf
-        ├── cli -- php-cli config
-        └── fpm -- php-fpm config
+        ├── cli --- Php-cli config folder
+        └── fpm --- Php-fpm config folder
 ```
+
 ### Private IP Address 
 
 Private address which container talk to each others
