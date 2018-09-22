@@ -75,7 +75,7 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => '172.20.1.4',
+	'hostname' => 'lemp-mysql',
 	'username' => 'root',
 	'password' => 'asdf',
 	'database' => '',

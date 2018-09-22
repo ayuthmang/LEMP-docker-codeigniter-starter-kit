@@ -12,9 +12,8 @@ services:
     depends_on:
       - phpfpm
     networks:
-      lemp-network:
-        ipv4_address: ${LEMP_NGINX}
-
+      - lemp-network
+      
   phpfpm:
     image: blacksource/php7-fpm
     container_name: lemp-phpfpm
@@ -26,8 +25,7 @@ services:
       - ./phpfpm/conf/cli/php.ini:/etc/php/7.0/cli/php.ini
       - ./nginx/site/:/usr/share/nginx/html
     networks:
-      lemp-network:
-        ipv4_address: ${LEMP_PHPFPM}
+      - lemp-network
 
   mysql-data:
     image: busybox
@@ -46,16 +44,12 @@ services:
       - ./mysql/conf/:/etc/mysql/conf.d
       - ./mysql/log/:/var/log/mysql
     environment: 
-      MYSQL_ROOT_PASSWORD: asdf 
+      MYSQL_ROOT_PASSWORD: asdf
     networks:
-      lemp-network:
-        ipv4_address: ${LEMP_MYSQL}
+      - lemp-network
 
 networks:
   lemp-network:
     driver: bridge
     ipam:
       driver: default
-      config:
-        - subnet: ${LEMP_SUBNET}
-          gateway: ${LEMP_GATEWAY}

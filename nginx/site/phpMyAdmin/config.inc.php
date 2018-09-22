@@ -28,7 +28,7 @@ $i++;
 /* Authentication type */
 $cfg['Servers'][$i]['auth_type'] = 'config'; # change to 'cookie' if you want to use cookies
 /* Server parameters */
-$cfg['Servers'][$i]['host'] = '172.20.1.4';
+$cfg['Servers'][$i]['host'] = 'lemp-mysql';
 $cfg['Servers'][$i]['user'] = 'root';
 $cfg['Servers'][$i]['password'] = 'asdf';
 $cfg['Servers'][$i]['compress'] = false;
