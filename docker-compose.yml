@@ -44,7 +44,7 @@ services:
       - ./mysql/conf/:/etc/mysql/conf.d
       - ./mysql/log/:/var/log/mysql
     environment: 
-      MYSQL_ROOT_PASSWORD: asdf
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     networks:
       - lemp-network
 
