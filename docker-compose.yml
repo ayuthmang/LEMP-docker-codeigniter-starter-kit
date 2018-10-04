@@ -34,7 +34,7 @@ services:
       - ./mysql/storage:/var/lib/mysql
 
   mysql:
-    image: mysql:5.7.20
+    image: mysql:5.7.23
     container_name: lemp-mysql
     ports:
       - "3306:3306"
