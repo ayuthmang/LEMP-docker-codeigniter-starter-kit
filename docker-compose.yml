@@ -15,7 +15,7 @@ services:
       - lemp-network
       
   phpfpm:
-    image: blacksource/php7-fpm
+    image: blacksourcez/php7-fpm
     container_name: lemp-phpfpm
     expose: 
       - "9000"
