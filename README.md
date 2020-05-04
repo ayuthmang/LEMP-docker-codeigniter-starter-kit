@@ -65,7 +65,7 @@ phpmyadmin: http://localhost/phpmyadmin
 
 #### Networking in Compose
 
-Containers are talking each other by using container name for example if I want to connect phpMyAdmin to sql I just using MySQL container name `lemp-mysql`
+Containers are talking each other by using container's name, for example if I want to connect phpMyAdmin to sql I just using MySQL container name `lemp-mysql`
 
 
 ## Special Thanks
